@@ -27,10 +27,10 @@ memory_in_gbs = 1
 wait_s_for_retry = 10
 
 logging.info("#####################################################")
-logging.info("Script to spawn VM.Standard.A1.Flex instance")
+logging.info("Script to spawn VM.Standard.E2.1.Micro instance")
 
 
-message = f'Start spawning instance VM.Standard.A1.Flex - {ocpus} ocpus - {memory_in_gbs} GB'
+message = f'Start spawning instance VM.Standard.E2.1.Micro - {ocpus} ocpus - {memory_in_gbs} GB'
 logging.info(message)
 
 logging.info("Loading OCI config")
@@ -39,12 +39,12 @@ config = oci.config.from_file(file_location="./config")
 logging.info("Initialize service client with default config file")
 to_launch_instance = oci.core.ComputeClient(config)
 
-message = f"Instance to create: VM.Standard.A1.Flex - {ocpus} ocpus - {memory_in_gbs} GB"
+message = f"Instance to create: VM.Standard.E2.1.Micro - {ocpus} ocpus - {memory_in_gbs} GB"
 logging.info(message)
 
 logging.info("Check current instances in account")
 logging.info(
-    "Note: Free upto 4xVM.Standard.A1.Flex instance, total of 4 ocpus and 24 GB of memory")
+    "Note: Free upto VM.Standard.E2.1.Micro instance, total of 4 ocpus and 24 GB of memory")
 current_instance = to_launch_instance.list_instances(compartment_id=compartment_id)
 response = current_instance.data
 
@@ -55,12 +55,12 @@ if response:
     for instance in response:
         logging.info(f"{instance.display_name} - {instance.shape} - {int(instance.shape_config.ocpus)} ocpu(s) - {instance.shape_config.memory_in_gbs} GB(s) | State: {instance.lifecycle_state}")
         instance_names.append(instance.display_name)
-        if instance.shape == "VM.Standard.A1.Flex" and instance.lifecycle_state not in ("TERMINATING", "TERMINATED"):
+        if instance.shape == "VM.Standard.E2.1.Micro" and instance.lifecycle_state not in ("TERMINATING", "TERMINATED"):
             _A1_Flex += 1
             total_ocpus += int(instance.shape_config.ocpus)
             total_memory += int(instance.shape_config.memory_in_gbs)
 
-    message = f"Current: {_A1_Flex} active VM.Standard.A1.Flex instance(s) (including RUNNING OR STOPPED)"
+    message = f"Current: {_A1_Flex} active VM.Standard.E2.1.Micro instance(s) (including RUNNING OR STOPPED)"
     logging.info(message)
 else:
     logging.info(f"No instance(s) found!")
@@ -80,7 +80,7 @@ if instance_display_name in instance_names:
     logging.critical(message)
     sys.exit()
 
-message = f"Precheck pass! Create new instance VM.Standard.A1.Flex: {ocpus} opus - {memory_in_gbs} GB"
+message = f"Precheck pass! Create new instance VM.Standard.E2.1.Micro: {ocpus} opus - {memory_in_gbs} GB"
 logging.info(message)
 
 instance_detail = oci.core.models.LaunchInstanceDetails(
@@ -88,7 +88,7 @@ instance_detail = oci.core.models.LaunchInstanceDetails(
         "ssh_authorized_keys": ssh_key
     },
     availability_domain=domain,
-    shape='VM.Standard.A1.Flex',
+    shape='VM.Standard.E2.1.Micro',
     compartment_id=compartment_id,
     display_name=instance_display_name,
     source_details=oci.core.models.InstanceSourceViaImageDetails(
