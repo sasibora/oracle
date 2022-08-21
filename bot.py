@@ -1,4 +1,4 @@
-instance_display_name = 'instance-20220528-1235'
+displayName = 'instance-20220821-0745'
 compartment_id = 'ocid1.tenancy.oc1..aaaaaaaarbrmmxbh6zepzkslxm5ojr7rzr3acruhy5ybju7bgzd5pvq335ca'
 domain = "zlEC:AP-SINGAPORE-1-AD-1"
 image_id = "ocid1.image.oc1.ap-singapore-1.aaaaaaaaldfh4yzwhddx4ms7pytplyg5ncnp4kgeiam37zrgwh2qcfifpo3q"
@@ -73,8 +73,8 @@ if total_ocpus + ocpus > 2 or total_memory + memory_in_gbs > 2:
     logging.critical(message)
     sys.exit()
 
-if instance_display_name in instance_names:
-    message = f"Duplicate display name: >>>{instance_display_name}<<< Change this! **SCRIPT STOPPED**"
+if displayName in instance_names:
+    message = f"Duplicate display name: >>>{displayName}<<< Change this! **SCRIPT STOPPED**"
     logging.critical(message)
     sys.exit()
 
@@ -88,7 +88,7 @@ instance_detail = oci.core.models.LaunchInstanceDetails(
     availability_domain=domain,
     shape='VM.Standard.E2.1.Micro',
     compartment_id=compartment_id,
-    display_name=instance_display_name,
+    display_name=displayName,
     source_details=oci.core.models.InstanceSourceViaImageDetails(
         source_type="image", image_id=image_id),
     create_vnic_details=oci.core.models.CreateVnicDetails(
