@@ -118,7 +118,6 @@ while to_try:
         to_try = False
         message = 'Success! Edit vnic to get public ip address'
         logging.info(message)
-        # print(to_launch_instance.data)
         session.close()
     except oci.exceptions.ServiceError as e:
         if e.status == 500:
