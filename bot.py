@@ -43,8 +43,6 @@ message = f"Instance to create: VM.Standard.E2.1.Micro - {ocpus} ocpus - {memory
 logging.info(message)
 
 logging.info("Check current instances in account")
-logging.info(
-    "Note: Free upto VM.Standard.E2.1.Micro instance, total of 4 ocpus and 24 GB of memory")
 current_instance = to_launch_instance.list_instances(compartment_id=compartment_id)
 response = current_instance.data
 
