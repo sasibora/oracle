@@ -1,6 +1,6 @@
 displayName = 'instance-20220821-0745'
 compartmentId = 'ocid1.tenancy.oc1..aaaaaaaarbrmmxbh6zepzkslxm5ojr7rzr3acruhy5ybju7bgzd5pvq335ca'
-domain = "zlEC:AP-SINGAPORE-1-AD-1"
+availabilityDomain = "zlEC:AP-SINGAPORE-1-AD-1"
 image_id = "ocid1.image.oc1.ap-singapore-1.aaaaaaaaldfh4yzwhddx4ms7pytplyg5ncnp4kgeiam37zrgwh2qcfifpo3q"
 subnet_id = 'ocid1.subnet.oc1.ap-singapore-1.aaaaaaaafeijlmw7efv37vb7i6p4nl3xnro5wwynnqljmn2g24hzts22qc4a'
 ssh_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvzzFmmlrKkB/uH8WW+eMBQFCpi3gnU26y1qqK1RKgtFjJZlIzTxOyRr2LqMPXSH02mxiIR9u9LQjdXeQiuitGS3K6auxwj4JM50UMt/EkGzU/CLtCw8Ytsem0RW24+pKliQmhV9+AAD9OICRIznoUvLmL3QhLn7CXJhbD/pitBl6GbIlDB/LXSw847bIjeRVzxD0CiObl0tyq+hwGgqcJkj8aJunQcZEyAjHhFBC+T8wtANE/tM+FHy+SLQK1YDPctDr/L6w+3jSNvNEqBYXXD+dpIsEt7hygvzHCuJeTUOSdnh63YeujjtD1IfwGtaoy9p5tg4I1WRPPxOlfC3Hb ssh-key-2022-05-28"
@@ -85,7 +85,7 @@ instance_detail = oci.core.models.LaunchInstanceDetails(
     metadata={
         "ssh_authorized_keys": ssh_key
     },
-    availability_domain=domain,
+    availability_domain=availabilityDomain,
     shape='VM.Standard.E2.1.Micro',
     compartment_id=compartmentId,
     display_name=displayName,
