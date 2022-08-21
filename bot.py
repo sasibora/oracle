@@ -2,7 +2,7 @@ displayName = 'instance-20220821-0745'
 compartmentId = 'ocid1.tenancy.oc1..aaaaaaaarbrmmxbh6zepzkslxm5ojr7rzr3acruhy5ybju7bgzd5pvq335ca'
 availabilityDomain = "zlEC:AP-SINGAPORE-1-AD-1"
 imageId = "ocid1.image.oc1.ap-singapore-1.aaaaaaaafdyxmpthywkt75cjezd4dbxbh5w5n5ejjteiv654ghvnnxst7dqa"
-subnet_id = 'ocid1.subnet.oc1.ap-singapore-1.aaaaaaaafeijlmw7efv37vb7i6p4nl3xnro5wwynnqljmn2g24hzts22qc4a'
+subnetId = 'ocid1.subnet.oc1.ap-singapore-1.aaaaaaaakcx7jybvgxszdyya7znjqpob7wo6bg6t523lj7hs5gbrj73ihgza'
 ssh_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvzzFmmlrKkB/uH8WW+eMBQFCpi3gnU26y1qqK1RKgtFjJZlIzTxOyRr2LqMPXSH02mxiIR9u9LQjdXeQiuitGS3K6auxwj4JM50UMt/EkGzU/CLtCw8Ytsem0RW24+pKliQmhV9+AAD9OICRIznoUvLmL3QhLn7CXJhbD/pitBl6GbIlDB/LXSw847bIjeRVzxD0CiObl0tyq+hwGgqcJkj8aJunQcZEyAjHhFBC+T8wtANE/tM+FHy+SLQK1YDPctDr/L6w+3jSNvNEqBYXXD+dpIsEt7hygvzHCuJeTUOSdnh63YeujjtD1IfwGtaoy9p5tg4I1WRPPxOlfC3Hb ssh-key-2022-05-28"
 
 
@@ -92,7 +92,7 @@ instance_detail = oci.core.models.LaunchInstanceDetails(
     source_details=oci.core.models.InstanceSourceViaImageDetails(
         source_type="image", image_id=imageId),
     create_vnic_details=oci.core.models.CreateVnicDetails(
-        assign_public_ip=False, subnet_id=subnet_id, assign_private_dns_record=True),
+        assign_public_ip=False, subnet_id=subnetId, assign_private_dns_record=True),
     agent_config=oci.core.models.LaunchInstanceAgentConfigDetails(
         is_monitoring_disabled=False,
         is_management_disabled=False,
