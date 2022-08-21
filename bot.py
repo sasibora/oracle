@@ -68,8 +68,8 @@ message = f"Total ocpus: {total_ocpus} - Total memory: {total_memory} (GB) || Fr
 logging.info(message)
 
 
-if total_ocpus + ocpus > 4 or total_memory + memory_in_gbs > 24:
-    message = "Total maximum resource exceed free tier limit (Over 4 ocpus/24GB total). **SCRIPT STOPPED**"
+if total_ocpus + ocpus > 2 or total_memory + memory_in_gbs > 2:
+    message = "Total maximum resource exceed free tier limit (Over 2 AMD micro instances total). **SCRIPT STOPPED**"
     logging.critical(message)
     sys.exit()
 
