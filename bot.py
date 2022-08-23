@@ -116,7 +116,7 @@ while to_try:
         to_try = False
         message = 'Success! Edit vnic to get public ip address'
         logging.info(message)
-        session.close()
+        sys.exit()
     except oci.exceptions.ServiceError as e:
         if e.status == 500:
             message = f"{e.message} Retry in {wait_s_for_retry}s"
@@ -129,5 +129,4 @@ while to_try:
         logging.info(message)
         time.sleep(wait_s_for_retry)
     except KeyboardInterrupt:
-        session.close()
         sys.exit()
