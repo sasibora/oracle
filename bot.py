@@ -1,9 +1,9 @@
-displayName = 'instance-20220821-0745'
-compartmentId = 'ocid1.tenancy.oc1..aaaaaaaarbrmmxbh6zepzkslxm5ojr7rzr3acruhy5ybju7bgzd5pvq335ca'
-availabilityDomain = "zlEC:AP-SINGAPORE-1-AD-1"
-imageId = "ocid1.image.oc1.ap-singapore-1.aaaaaaaafdyxmpthywkt75cjezd4dbxbh5w5n5ejjteiv654ghvnnxst7dqa"
-subnetId = 'ocid1.subnet.oc1.ap-singapore-1.aaaaaaaakcx7jybvgxszdyya7znjqpob7wo6bg6t523lj7hs5gbrj73ihgza'
-ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWoVKFDIjGv7LJ3kKO+0pj7+CCWwnWSLTXN8/ghCLClPXd5bnpDiViTkCzLlJnVzi7YfGivw4sF73tKrIPI1KJH+9J2KhcIimmdT1T2Y1deg12hgONhhWXraQchJi/MzVS/Hw2EvbR/sGgu+o5SQ1oYgXT2WEM9YM/8+BTi9hupKyvvKQyPEaRalxjUxK5bp/5VHwE8OHZ799whiIip/xIJSvpB9xxM85kFA41MJ9bJdjGPfiQdyrL4A/I01/G4LyS1tt6ZZPEWIPkbgdFOhLyzWVDlGtgihbkFsVNbWITfWQlNZQfT5iRaO7QyBlVrrD/ml79aD2hDDoOz+GWvi+j ssh-key-2022-08-21"
+displayName = 'xxxxxxxxx'
+compartmentId = 'xxxxxxxx'
+availabilityDomain = "xxxxxxxxx"
+imageId = "xxxxxxxxx"
+subnetId = 'xxxxxxxxxx'
+ssh_authorized_keys = "xxxxxxxxx"
 
 
 import oci
