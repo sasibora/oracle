@@ -1,1 +1,6 @@
-
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaas32qiuslwfjillt3sgw3zs4jrppde533icgzo5fqygaq4jhpvpgq
+fingerprint=9e:17:a8:25:bf:09:4c:30:74:29:3d:e4:fa:02:94:51
+tenancy=ocid1.tenancy.oc1..aaaaaaaakjlxhpdijpqenm4luclanuzbat5hsiglcitsjutv34exs4q55sqa
+region=uk-london-1
+key_file=sysmehdi.pem
